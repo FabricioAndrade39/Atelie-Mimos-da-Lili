@@ -73,39 +73,7 @@ form input:focus {
     border-radius: 16px;
   }
 
-  .contato-orcamento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-image:  linear-gradient(90deg, rgb(28, 141, 240) 50%, rgb(101, 9, 101));    
-  }
-
-  .text-contato {
-    font-size: 45px;
-    color: white;
-    margin-bottom: 30px;
-  }
-
-  .paragrafo {
-    color: white;
-    margin-bottom: 50px;
-  }
-
-  .btn-link {
-    padding: 15px 55px;
-    background-image: linear-gradient(90deg, #F0E68C, white );
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
-    transition: all 0.5s;
-  }
-
-  .btn-link:hover {
-    border-radius: 16px;
-  }
-
+ 
 
 
 
