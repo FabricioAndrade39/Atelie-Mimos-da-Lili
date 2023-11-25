@@ -35,7 +35,7 @@
 
     .nome-logo {
         width: 100%;
-        font-size: 14px;
+        font-size: 18px;
         padding: 0;
         margin-left: 15px;
     } 
@@ -65,13 +65,16 @@
         width: 200px;
         height: 70px;
         margin-left: 15px;
-        margin-top: 30px;
+        margin-top: 40px;
+        padding: 5px 5px;
     }
 
     .btn-orcamento {
         display: flex;
         width: 100%;
-        font-size: 12px;
+        height: 100%;
+        font-size: 16px;
+        font-weight: bold;
         margin-right: 12px;
         justify-content: center;
         padding: 5px 5px;
