@@ -9,10 +9,10 @@
     
     
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/redes-sociais.css">
     <link rel="stylesheet" href="./css/formulario.css">
     <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/texto animado.css">
+    <link rel="stylesheet" href="./css/media-query.css">
     
     
     
@@ -21,11 +21,13 @@
 
 <body>
 
-    <div id="container">
-        <div id="header">
-            <img id="buterfly" src="./images/buterfly.png" alt="imagem borboleta">
-            <div id="title-main">
-                <h1 id="nome-empresa">Ateliê Mimos da Lili</h1>
+    <header>
+        <div class="center">
+            <div class="logo-buterfly">
+                <img id="buterfly" src="./images/buterfly.png" alt="imagem borboleta">
+            </div>
+            <div class="nome-logo">
+                <h1 id="title-main">Ateliê Mimos da Lili</h1>
             </div>
             <div class="redes-sociais">
                 <a class="instagram" href="https://www.instagram.com/ateliemimosdalili/" title="Instagram">
@@ -60,32 +62,44 @@
                 </a>
             </div>
         </div>
+    </header>
 
+    <section class="container">
         <div class="main">
-            <img id="trabalhos" src="./images/fotos-insta.gif" alt="Imagens dos meus trabalhos">
+            
+            <div class="slides-trabalhos">
+                <img id="img-trabalhos" src="./images/fotos-insta.gif" alt="Imagens dos meus trabalhos">
+                <div class="menu-orcamento">
+                    <button class="btn-orcamento" id="open-modal-orcamento">Solicitar Orçamento</button>
+                </div> 
+            </div>
+            
             <div class="frases"> 
+                
                 <h1 class="texto ">Algumas coisas tem preço Personalizado tem valor!</h1>
                 <ul>
                     <li>Trabalhar com as mãos é uma terapia, trabalhar com o coração é uma alegria.</li>
                     <li>A criatividade é a inteligência se dirvertindo.</li>
                     <li>Fazer Personalizados é transformar a matéria e tocar a alma.</li>
                 </ul>
+                
+                <div class="container-texto-animado">
+                    <div class="texto-animado">
+                        <div id="text"></div>
+                    </div>
+                </div>
             </div>
-            <img id="img-silhouette" src="./images/logo-silhouette.png" alt="Imagem Silhouette">
-        </div>
-        <div class="container-texto-animado">
-            <div id="text"></div>
-        </div>
 
-        <div class="menu-orcamento">
-            <button class="btn-orcamento" id="open-modal-orcamento">Solicitar Orçamento</button>
-        </div>       
-    </div>
+            <div class="logo-silhouette">
+                <img id="img-silhouette" src="./images/logo-silhouette.png" alt="Imagem Silhouette">
+            </div>
+        </div>              
+    </section>
 
     <div id="fade" class="hide"></div>
     <div id="modal" class="hide">
 
-        <section> 
+        <section class="formulario"> 
             <form action="https://api.staticforms.xyz/submit" method="post">
                 <h3 class="title-modal">Solicite seu orçamento, Atendemos todo DF</h3>
                 <button id="close-modal">x</button>
