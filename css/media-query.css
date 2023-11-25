@@ -12,6 +12,7 @@
     body, html {
         width: 100%;
         height: 100%;
+        padding: 3px 3px;
     }
     header {
         display: flex;
@@ -34,7 +35,7 @@
 
     .nome-logo {
         width: 100%;
-        font-size: 12px;
+        font-size: 10px;
         padding: 0;
     } 
     
@@ -45,6 +46,7 @@
     .container {
         display: flex;
         width: 100%;
+        padding:0 10px;
     }
 
    
@@ -59,17 +61,18 @@
 
     .menu-orcamento {
         display: flex;
-        width: 250px;
+        width: 200px;
         height: 70px;
-        margin-left: 30px;
+        margin-left: 15px;
         margin-top: 30px;
     }
 
     .btn-orcamento {
         display: flex;
         width: 100%;
-        font-size: 12px;
-        margin-right: 17px;
+        font-size: 10px;
+        margin-right: 12px;
+        justify-content: center;
     }
 
     .main {
@@ -96,6 +99,16 @@
     .container-texto-animado {
         width: 100%;
         align-items: center;
+        height: 200px;
+    }
+
+    .texto-animado {
+        height: 200px;
+    }
+
+    .logo-silhouette {
+        align-items: center;
+        justify-content: center;
     }
 
     #img-silhouette {
