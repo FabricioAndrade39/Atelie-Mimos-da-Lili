@@ -51,7 +51,7 @@
 
    
     #img-trabalhos {
-        width: 150px;
+        width: 200px;
     }
 
     .slides-trabalhos {
@@ -70,9 +70,10 @@
     .btn-orcamento {
         display: flex;
         width: 100%;
-        font-size: 10px;
+        font-size: 12px;
         margin-right: 12px;
         justify-content: center;
+        padding: 5px 5px;
     }
 
     .main {
