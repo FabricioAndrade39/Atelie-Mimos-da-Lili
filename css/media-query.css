@@ -121,8 +121,8 @@
 
     .formulario {
         padding: 4px 7px;
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 400px;
     }
 
     .title-modal {
@@ -157,7 +157,7 @@
 
     .btn-enviar {
         padding: 5px;
-        margin-top: 3px;
+        margin-top: 6px;
         margin-bottom: 3px;
         font-size: 10px;
     }
@@ -167,9 +167,9 @@
     }
 
     #modal {
-        left: 25%;
+        left: 15%;
         top: 50%;
-        transform: translate(-25%, -50%);
+        transform: translate(-15%, -50%);
     }
 
     #close-modal {
@@ -177,7 +177,7 @@
         padding: 3px 3px;
         width: 35px;
         height: 35px;
-        left: 325px;
+        left: 275px;
         top: -15px;
     }
     
