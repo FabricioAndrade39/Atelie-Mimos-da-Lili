@@ -3,26 +3,30 @@ form {
     font-size: 14px;  
 }
 
-section {
+.formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1px 30px;
+    padding: 10px 15px;
     background-image: linear-gradient(90deg, #F0E68C, white );
-    
+    width: 500px;
+    height: 500px;
 }
-section form {
+
+.formulario form {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
 }
 
 .title-modal {
     color: black;
-    margin: 2rem;
+    margin: 1rem;
     font-size: 14px;
+    margin-left: 80px;
 }
 
 form label {
