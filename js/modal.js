@@ -11,3 +11,7 @@ const toggleModal = () => {
 [openModalButton, closeModalButton, fade].forEach((el) => {
   el.addEventListener("click", () => toggleModal());
 });
+
+function exibirAlerta() {
+  alert("Formulário eviado com Sucesso! \n Em breve entraremos em contato.");
+} 
