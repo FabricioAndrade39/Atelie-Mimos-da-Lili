@@ -224,16 +224,6 @@
     @include flex($gap: 1rem, $justify: space-evenly);
   }
 
-  &__rede {
-    opacity: 0.6;
-    filter: grayscale(1);
-
-    &:hover {
-      opacity: 1;
-      filter: none;
-    }
-  }
-
   &__diferenciais {
     @include flex($gap: 2rem);
     margin: 6.1rem auto;

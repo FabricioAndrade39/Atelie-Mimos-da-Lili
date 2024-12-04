@@ -6,16 +6,12 @@
 
 $cor-preta: #000;
 $cor-branca: #fff;
-$cor-off-white: #f9f9f9;
-$cor-off-white-2: #f0f0f0;
-$cor-cinza: #626262;
-$cor-cinza-pouco-escuro: #585858;
-$cor-cinza-escuro: #1b1b1b;
-$cor-cinza-claro: #a7a7a7;
-$cor-cinza-mais-claro: #b0b0b0;
-$cor-cinza-muito-claro: #d8d9da;
-$cor-vermelha: #ff0000;
-$cor-verde: #38ab6b;
+$cor-azul: rgb(64, 85, 158);
+$cor-azul-claro: rgb(20, 84, 199);
+$cor-vermelha: #ad0505;
+$cor-cinza-claro: rgba(238, 238, 238);
+$cor-bege: #fffdeb;
+$cor-amarela: #fff7ad;
 
 //Mixins
 
@@ -50,27 +46,5 @@ $cor-verde: #38ab6b;
     @media (max-width: 80em) {
       @content;
     }
-  }
-}
-
-// Placeholder
-
-%botao-verde {
-  margin-top: 1.28rem;
-  width: 100%;
-  background-color: $cor-verde;
-  border-radius: 8px;
-  color: $cor-branca;
-  font-size: inherit;
-  text-transform: uppercase;
-  border: none;
-  padding: 1.6rem 0;
-  cursor: pointer;
-  transition: background-color ease-in 0.15s;
-  text-decoration: none;
-  text-align: center;
-
-  &:hover {
-    background-color: darken($cor-verde, 10%);
   }
 }

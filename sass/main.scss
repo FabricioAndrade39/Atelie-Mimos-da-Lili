@@ -7,10 +7,9 @@
 @import 'base/base';
 
 // 4. Layout-related sections
-@import 'layout/header', 'layout/footer';
+@import 'layout/header';
 
 // 5. Components
-@import 'components/carrossel';
 
 // 6. Page-specific styles
 @import 'pages/home';
