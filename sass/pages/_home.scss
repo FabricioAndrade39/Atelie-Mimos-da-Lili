@@ -1,37 +1,62 @@
-.banner {
+.cards {
   &-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     padding: 0 1rem;
+  }
+}
 
-    @include respond(medium) {
-      gap: 0.65rem;
-      padding: 0 0.65rem;
-    }
+.card {
+  @include flex($direction: column, $gap: 1rem, $justify: space-between);
+  box-shadow: 0 0 0.2rem rgba($cor-preta, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 2.5rem;
 
-    @include respond(small) {
-      grid-template-columns: 1fr;
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    color: $cor-azul-claro;
+  }
+
+  &__imagem {
+    @include flex($align: center, $justify: center);
+    width: 100%;
+
+    & img {
+      width: 20rem;
+      height: 20rem;
+      border-radius: 2.5rem;
+      transition: all ease-in 100ms;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
-  &-individual {
-    & a {
-      & img {
-        &:last-child {
-          display: none;
-        }
+  &__botoes {
+    @include flex($direction: column, $gap: 0.65rem);
+  }
 
-        @include respond(medium) {
-          &:first-child {
-            display: none;
-          }
+  &__botao {
+    border-radius: 2.5rem;
+    padding: 0.65rem 0;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: $cor-lilas-escuro;
+    border: none;
+    color: $cor-branca;
+    transition: all ease 100ms;
 
-          &:last-child {
-            display: block;
-          }
-        }
-      }
+    &:hover {
+      border: 2px solid $cor-lilas-escuro;
+      background-color: $cor-branca;
+      color: $cor-preta;
+      transform: scale(1.02);
     }
   }
 }

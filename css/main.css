@@ -21,6 +21,28 @@ body {
   background-color: #fff;
 }
 
+.whatsapp {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translate(-15%, -20%);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 7rem;
+  height: 7rem;
+  background-color: #27b43e;
+  border-radius: 50%;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all ease 100ms;
+}
+.whatsapp:hover {
+  opacity: 1;
+}
+
 img {
   width: 100%;
   max-width: 100%;
@@ -104,10 +126,10 @@ img {
   height: 3.5rem;
 }
 .cabecalho__logo {
-  min-height: 20rem;
-  height: 20rem;
-  min-width: 40rem;
-  width: 40rem;
+  min-height: 15rem;
+  height: 15rem;
+  min-width: 30rem;
+  width: 30rem;
   margin-bottom: 2px;
 }
 .cabecalho__search {
@@ -173,33 +195,200 @@ img {
   padding: 3.12rem 0;
 }
 
-.banner-grid {
+.rodape {
+  font-size: 1.33rem;
+  color: #6e45e2;
+  margin-top: 4.88rem;
+}
+.rodape__informacoes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4.88rem;
+  background-color: #fff7ad;
+  padding: 2rem 3.12rem;
+}
+.rodape__sobre, .rodape__institucional, .rodape__contato, .rodape__rede {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: start;
+  gap: 2.5rem;
+}
+.rodape__contato .rodape__link {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.65rem;
+}
+.rodape__redes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.6rem;
+}
+.rodape__redes img {
+  width: 3.5rem;
+  height: 3.5rem;
+  opacity: 0.6;
+}
+.rodape__redes img:hover {
+  opacity: 1;
+}
+.rodape__paragrafos {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+.rodape__title {
+  font-size: 1.92rem;
+  font-weight: 700;
+  text-align: center;
+}
+.rodape__lista {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.02rem;
+  list-style: none;
+}
+.rodape__link {
+  text-decoration: none;
+  color: #6e45e2;
+}
+.rodape__link img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.rodape__copy {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+  padding: 2rem 3.12rem;
+}
+.rodape__copy p {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1694/420;
+  overflow: hidden;
+}
+.carrossel__imagens {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+  transition: transform ease 500ms;
+}
+.carrossel__item {
+  min-width: 100%;
+  height: 100%;
+}
+.carrossel__botoes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.82rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -2rem);
+  z-index: 1;
+}
+.carrossel__botao {
+  background-color: rgba(238, 238, 238, 0.5);
+  width: 12.5rem;
+  height: 0.2rem;
+  border-radius: 5rem;
+}
+.carrossel__preenchimento {
+  width: 1.5%;
+  height: 100%;
+  background-color: #fff;
+  transition: none;
+}
+.carrossel__preenchimento--completo {
+  width: 100%;
+  transition: width ease-out 5s;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding: 0 1rem;
 }
-@media (max-width: 59.375em) {
-  .banner-grid {
-    gap: 0.65rem;
-    padding: 0 0.65rem;
-  }
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 2.5rem;
 }
-@media (max-width: 30em) {
-  .banner-grid {
-    grid-template-columns: 1fr;
-  }
+.card__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  color: rgb(20, 84, 199);
 }
-.banner-individual a img:last-child {
-  display: none;
+.card__imagem {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
 }
-@media (max-width: 59.375em) {
-  .banner-individual a img:first-child {
-    display: none;
-  }
-  .banner-individual a img:last-child {
-    display: block;
-  }
+.card__imagem img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 2.5rem;
+  transition: all ease-in 100ms;
+}
+.card__imagem img:hover {
+  transform: scale(1.05);
+}
+.card__botoes {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.65rem;
+}
+.card__botao {
+  border-radius: 2.5rem;
+  padding: 0.65rem 0;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: #6e45e2;
+  border: none;
+  color: #fff;
+  transition: all ease 100ms;
+}
+.card__botao:hover {
+  border: 2px solid #6e45e2;
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=main.css.map */
