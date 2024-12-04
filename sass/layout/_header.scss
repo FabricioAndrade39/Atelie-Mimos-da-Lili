@@ -1,7 +1,7 @@
 .cabecalho {
   position: sticky;
   top: 0;
-  @include flex($align: center, $justify: space-between, $gap: 1.6rem);
+  @include flex($align: center, $justify: space-around, $gap: 1.6rem);
   background-color: $cor-bege;
   z-index: 999;
 
@@ -12,8 +12,106 @@
   }
 
   &__superior {
-    @include flex($align: center, $justify: space-between, $gap: 1.6rem);
+    @include flex($align: center, $justify: space-around, $gap: 1.6rem);
+    position: relative;
     width: 100%;
+  }
+
+  &__contato {
+    @include flex($align: center, $justify: center);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid $cor-cinza-claro;
+
+    &:hover .cabecalho__informacoes-contato {
+      display: block;
+    }
+  }
+
+  &__contatos {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__informacoes-contato {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-10%, 135%);
+    @include flex($direction: column, $gap: 1.2rem, $justify: center);
+    padding: 2.5rem;
+    background-color: $cor-lilas-escuro;
+    width: max-content;
+    text-align: left;
+    border-radius: 1rem;
+    display: none;
+    transition: all ease 100ms;
+
+    & a {
+      @include flex($gap: 0.65rem);
+      text-decoration: none;
+      font-size: 1.33rem;
+      color: $cor-branca;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      & img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      transform: translateX(150%);
+      border-width: 1.2rem;
+      border-style: solid; /* Define as bordas sólidas */
+      border-color: transparent transparent $cor-lilas-escuro transparent;
+    }
+  }
+
+  &__search {
+    position: relative;
+    @include flex($align: center);
+    width: 60rem;
+
+    & input {
+      width: 100%;
+      padding: 1.2rem 0.65rem;
+      border-radius: 0.5rem;
+      border: 1px solid $cor-cinza-claro;
+      outline: none;
+    }
+  }
+
+  &__botao {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all ease 200ms;
+
+    svg {
+      fill: $cor-azul;
+
+      &:hover {
+        fill: $cor-azul-claro;
+      }
+    }
   }
 
   &__inferior {
@@ -56,30 +154,6 @@
     min-width: 30rem;
     width: 30rem;
     margin-bottom: 2px;
-  }
-
-  &__search {
-    @include flex($align: center, $gap: 1.6rem);
-    padding-right: 3.05rem;
-  }
-
-  &__botao {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    padding: 1rem;
-    border: 2px solid $cor-cinza-claro;
-    background-color: inherit;
-    cursor: pointer;
-    transition: all ease 200ms;
-
-    svg {
-      fill: $cor-azul;
-
-      &:hover {
-        fill: $cor-azul-claro;
-      }
-    }
   }
 
   &__navegacao {

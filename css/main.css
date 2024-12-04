@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -63,7 +64,7 @@ img {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 1.6rem;
   background-color: #fffdeb;
   z-index: 999;
@@ -81,9 +82,110 @@ img {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 1.6rem;
+  position: relative;
   width: 100%;
+}
+.cabecalho__contato {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 1px solid rgb(238, 238, 238);
+}
+.cabecalho__contato:hover .cabecalho__informacoes-contato {
+  display: block;
+}
+.cabecalho__contatos {
+  width: 3rem;
+  height: 3rem;
+}
+.cabecalho__informacoes-contato {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-10%, 135%);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 2.5rem;
+  background-color: #6e45e2;
+  width: max-content;
+  text-align: left;
+  border-radius: 1rem;
+  display: none;
+  transition: all ease 100ms;
+}
+.cabecalho__informacoes-contato a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.65rem;
+  text-decoration: none;
+  font-size: 1.33rem;
+  color: #fff;
+}
+.cabecalho__informacoes-contato a:hover {
+  text-decoration: underline;
+}
+.cabecalho__informacoes-contato a img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.cabecalho__informacoes-contato::after {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(150%);
+  border-width: 1.2rem;
+  border-style: solid; /* Define as bordas sólidas */
+  border-color: transparent transparent #6e45e2 transparent;
+}
+.cabecalho__search {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 0;
+  width: 60rem;
+}
+.cabecalho__search input {
+  width: 100%;
+  padding: 1.2rem 0.65rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(238, 238, 238);
+  outline: none;
+}
+.cabecalho__botao {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all ease 200ms;
+}
+.cabecalho__botao svg {
+  fill: rgb(64, 85, 158);
+}
+.cabecalho__botao svg:hover {
+  fill: rgb(20, 84, 199);
 }
 .cabecalho__inferior {
   display: flex;
@@ -131,30 +233,6 @@ img {
   min-width: 30rem;
   width: 30rem;
   margin-bottom: 2px;
-}
-.cabecalho__search {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: start;
-  gap: 1.6rem;
-  padding-right: 3.05rem;
-}
-.cabecalho__botao {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  padding: 1rem;
-  border: 2px solid rgb(238, 238, 238);
-  background-color: inherit;
-  cursor: pointer;
-  transition: all ease 200ms;
-}
-.cabecalho__botao svg {
-  fill: rgb(64, 85, 158);
-}
-.cabecalho__botao svg:hover {
-  fill: rgb(20, 84, 199);
 }
 .cabecalho__navegacao {
   display: flex;
@@ -341,6 +419,8 @@ img {
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.3);
   padding: 1rem 2rem;
   border-radius: 2.5rem;
+  overflow: hidden;
+  max-width: 100%;
 }
 .card__title {
   font-size: 2.2rem;
@@ -380,15 +460,14 @@ img {
   font-size: 1.6rem;
   font-weight: 600;
   background-color: #6e45e2;
-  border: none;
+  border: 2px solid transparent;
   color: #fff;
   transition: all ease 100ms;
 }
 .card__botao:hover {
-  border: 2px solid #6e45e2;
   background-color: #fff;
   color: #000;
-  transform: scale(1.02);
+  border-color: #6e45e2;
 }
 
 /*# sourceMappingURL=main.css.map */
